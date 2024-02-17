@@ -40,7 +40,6 @@ const BookListPage = () => {
         background: "#dbdeee",
         minHeight: "100vh",
         maxWidth: "100vw",
-        maxHeight: "100vh",
         overflow: "hidden",
       }}
     >

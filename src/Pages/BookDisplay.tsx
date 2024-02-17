@@ -28,7 +28,7 @@ const BookDisplay = () => {
     <div
       style={{
         maxWidth: "100vw",
-        maxHeight: "100vh",
+        minHeight: "100vh",
         overflow: "hidden",
       }}
     >
