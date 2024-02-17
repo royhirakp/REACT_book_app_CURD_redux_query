@@ -49,7 +49,6 @@ export default function AddBooksModal({
   const [errorAutherStatus, setAuthererror] = React.useState(false);
 
   // logiin popup
-  // const [Loginopen, setOpen] = React.useState(false);
   const handleOpenLoginModal = () => setLoginOpen(true);
   const handleCloseLoginModal = () => setLoginOpen(false);
   const [addbookErro, setAddbookError] = React.useState(true);
@@ -60,12 +59,10 @@ export default function AddBooksModal({
 
     if (value.length > 11) {
       if (name === "imageUrl" && !urlPattern.test(value)) {
-        // alert("Please enter a valid URL.");
         setUrlError(true);
         // return; // Prevent setting invalid URL
       } else setUrlError(false);
     } else setUrlError(false);
-
     // handel error of title and auther
     if (name === "title") {
       if (formData.title === "") {
@@ -77,8 +74,6 @@ export default function AddBooksModal({
       if (formData.author === "") {
         setAuthererror(true);
       } else {
-        // console.log("autheorrrrr if conditiponnnn", formData.author);
-
         setAuthererror(false);
       }
     }
@@ -90,15 +85,9 @@ export default function AddBooksModal({
   };
 
   // error handel titel and auther
-
   return (
     <div>
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
+      <Modal open={open} onClose={handleClose}>
         <Box sx={{ ...style, borderRadius: "5px" }}>
           <LoginModal
             open={Loginopen}

@@ -52,10 +52,10 @@ export default function SingUpModal({
 
     if (name === "condirmPassword") {
       if (formData.password === value) {
-        console.log("password matcheddddd");
+        // console.log("password matcheddddd");
         setConfirmPassword(true);
       } else {
-        console.log("password not matched");
+        // console.log("password not matched");
         setConfirmPassword(false);
       }
     }
@@ -131,7 +131,7 @@ export default function SingUpModal({
                   onClick={async () => {
                     try {
                       let res = await singup(formData);
-                      console.log(res);
+                      // console.log(res);
 
                       let copy: any = res;
                       if (!copy.error) {

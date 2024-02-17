@@ -18,7 +18,7 @@ export default function MuiPagination({
   return (
     <Stack spacing={2}>
       <Pagination
-        count={handelParginatin()}
+        count={handelParginatin() || 0}
         // page={page} // Set the current page
         onChange={handlePageChange}
       />

@@ -4,13 +4,15 @@ export const userLoginRegister = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({
     baseUrl:
-      // "http://localhost:3002",
-      "https://flturr.onrender.com/",
+      // "http://localhost:3002/api/v1",
+      "https://express-book-app-curd-redux-query.onrender.com/api/v1",
+    // "https://flturr.onrender.com",
+
     prepareHeaders(headers) {
       const token = localStorage.getItem("token");
       if (token) {
         headers.set("authorization", `${token}`);
-        console.log("from redux, token set ", token);
+        // console.log("from redux, token set ", token);
       }
       headers.set("key", "data");
       return headers;

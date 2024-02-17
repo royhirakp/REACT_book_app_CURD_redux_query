@@ -10,10 +10,10 @@ export default function BookCard({ item }: { item: any }) {
 
   React.useEffect(() => {
     let value = 0;
-    console.log("item=", item);
+    // console.log("item=", item);
     for (let i in item?.comments) {
       let rattingUnit = item?.comments[i].ratting;
-      console.log(rattingUnit);
+      // console.log(rattingUnit);
       if (rattingUnit) {
         rattingUnit = rattingUnit * 1;
       } else {

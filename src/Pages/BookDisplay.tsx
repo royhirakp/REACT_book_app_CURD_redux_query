@@ -162,7 +162,7 @@ const CommnetForm = ({ id, refetch }: { id: string; refetch: any }) => {
                   } else setCommentError(false);
                   let rattingDta: any = formData.ratting;
                   rattingDta = rattingDta * 1;
-                  console.log(rattingDta);
+                  // console.log(rattingDta);
                   // handel ratting error
                   if (rattingDta) {
                     if (rattingDta < 6 && rattingDta > 0) {
@@ -172,12 +172,12 @@ const CommnetForm = ({ id, refetch }: { id: string; refetch: any }) => {
                       return;
                     }
                   } else {
-                    console.log(rattingDta, "ratting datatatatatta");
+                    // console.log(rattingDta, "ratting datatatatatta");
 
                     setRattingError(true);
                     return;
                   }
-                  console.log("API CALLLLLL");
+                  // console.log("API CALLLLLL");
                   let result: any = await makeComment({
                     id: id,
                     data: formData,

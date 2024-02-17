@@ -115,6 +115,7 @@ export default function LoginModal({
                     try {
                       let res = await login(formData);
                       let copy: any = res;
+                      // console.log(res);
                       if (!copy.error) {
                         localStorage.setItem("token", copy.data.token);
                         SetLoginSratus("Login sucessFull");
@@ -142,7 +143,7 @@ export default function LoginModal({
                   <span
                     style={{ cursor: "pointer", color: "red" }}
                     onClick={() => {
-                      console.log("a tag working");
+                      // console.log("a tag working");
                       handleOpenSingModal();
                     }}
                   >
