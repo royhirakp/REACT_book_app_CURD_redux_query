@@ -1,7 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { userLoginRegister } from "./api/LoginRegister";
 
-import { getBooksData } from "./api/GetBooks";
 // import userDataReducer from "../features/email-password/email-PasswordSlice";
 // import postDataReducer from "../features/postDataForEditAndCommentPost/postData-Slice";
 

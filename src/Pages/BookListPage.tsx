@@ -6,9 +6,7 @@ import FilterOptions from "../Components/FilterOptions";
 import { useNavigate } from "react-router-dom";
 import { useBooksQuery } from "../Redux/api/LoginRegister";
 import MuiBackDrop from "../Components/MuiBackDrop";
-interface fetchData {
-  // books;
-}
+
 const BookListPage = () => {
   //pagination
   const [page, setPage] = React.useState(1);
@@ -19,17 +17,15 @@ const BookListPage = () => {
     refetch,
     isError,
   } = useBooksQuery({});
-  const [refestFetchDataAfterUplodeBook, setRefresh] = useState(false);
   const [booksData, setBooksData] = useState<any[]>([]);
   const [Loginopen, setLoginOpen] = useState(false);
-  const [loder, setLoader] = useState(false);
   let getData = useCallback(() => {
     setBooksData(reduxdata?.books);
   }, [reduxdata]);
 
   useEffect(() => {
     getData();
-  }, [refestFetchDataAfterUplodeBook, getData, reduxdata]);
+  }, [getData, reduxdata]);
 
   const handlePageChange = (event: any, value: any) => {
     setPage(value);

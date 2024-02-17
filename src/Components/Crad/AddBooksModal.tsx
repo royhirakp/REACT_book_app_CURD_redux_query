@@ -68,7 +68,7 @@ export default function AddBooksModal({
 
     // handel error of title and auther
     if (name === "title") {
-      if (formData.title == "") {
+      if (formData.title === "") {
         setTitelerror(true);
       } else setTitelerror(false);
     }
@@ -189,10 +189,10 @@ export default function AddBooksModal({
                     try {
                       console.log(formData);
 
-                      if (formData.title == "") {
+                      if (formData.title === "") {
                         setTitelerror(true);
                       } else setTitelerror(false);
-                      if (formData.author == "") {
+                      if (formData.author === "") {
                         setAuthererror(true);
                       } else setAuthererror(false);
 
@@ -203,7 +203,6 @@ export default function AddBooksModal({
                         handleOpenLoginModal();
                       } else {
                         let result: any = await addBooks(formData);
-                        let errorhansel = { ...result };
                         // console.log("add book workingggggg", formData, result);
                         if (!result.data) {
                           setAddbookError(false);

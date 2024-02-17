@@ -43,10 +43,9 @@ export default function LoginModal({
   const handleOpenSingModal = () => setOpen(true);
   const handleCloseSingUpModal = () => setOpen(false);
   // login api
-  const [login, { isLoading, isError, isSuccess }] = useLoginMutation();
+  const [login, { isLoading }] = useLoginMutation();
   const [loginError, setLoginError] = React.useState("");
   const [loginSucess, SetLoginSratus] = React.useState("");
-  const [timer, setTimer] = React.useState(0);
 
   return (
     <div>

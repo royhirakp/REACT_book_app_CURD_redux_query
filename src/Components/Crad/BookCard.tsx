@@ -1,9 +1,7 @@
 import * as React from "react";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
 import { Typography, Box, Divider } from "@mui/material/";
 import ProductRate from "./Ratting";
 
@@ -12,7 +10,7 @@ export default function BookCard({ item }: { item: any }) {
 
   React.useEffect(() => {
     let value = 0;
-    console.log("itemmmmmmm;;;;;;;", item);
+    console.log("item=", item);
     for (let i in item?.comments) {
       let rattingUnit = item?.comments[i].ratting;
       console.log(rattingUnit);
@@ -23,9 +21,9 @@ export default function BookCard({ item }: { item: any }) {
       }
       value = value + rattingUnit;
     }
-    if (value == 0) return;
+    if (value === 0) return;
     setRattion(value / item?.comments?.length);
-  }, []);
+  }, [item]);
   return (
     <Card sx={{ maxWidth: 205, padding: "5px", cursor: "pointer" }}>
       <CardMedia

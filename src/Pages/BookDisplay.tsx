@@ -17,9 +17,9 @@ import {
 import LoginModal from "../Components/Crad/LoginModal";
 import MuiBackDrop from "../Components/MuiBackDrop";
 
-const BookDisplay = ({}: {}) => {
+const BookDisplay = () => {
   const { id } = useParams();
-  const { data, error, isLoading, refetch } = useGetUnitPostQuery({ id: id });
+  const { data, isLoading, refetch } = useGetUnitPostQuery({ id: id });
   const [state, setState] = useState({});
   useEffect(() => {
     setState(data?.book[0]);
@@ -97,8 +97,7 @@ const CommnetForm = ({ id, refetch }: { id: string; refetch: any }) => {
   const [commentError, setCommentError] = useState(false);
   const [errorComment, setErrorCommnt] = React.useState(false);
   const [Loginopen, setLoginOpen] = useState(false);
-  const [makeComment, { isError, isLoading, isSuccess }] =
-    useMakeCommentMutation();
+  const [makeComment, { isLoading, isSuccess }] = useMakeCommentMutation();
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
