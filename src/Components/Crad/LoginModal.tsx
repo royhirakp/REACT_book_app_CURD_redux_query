@@ -109,8 +109,8 @@ export default function LoginModal({
                 </Typography>
               </Box>
 
-              <Typography>
-                to test login use this email
+              <Typography sx={{ color: "red" }}>
+                to test login use this app:
                 <br /> email: "12@12.com" password: "12@12.com"
               </Typography>
               <Stack direction="row" justifyContent="center">
